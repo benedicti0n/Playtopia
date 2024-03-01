@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Genshin';
+    src: url('../Fonts/Genshin-Impact-DRIP-FONT.ttf');
+}
+
+@font-face {
+    font-family: 'Genshin Regular';
+    src: url('../Fonts/zh-cn.ttf');
+}
