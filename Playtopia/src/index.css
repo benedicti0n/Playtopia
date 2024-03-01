@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Genshin Drip';
+    src: url('../Fonts/Genshin\ Impact\ Drip.otf') format('otf'),
+}
+
+@font-face {
+    font-family: 'Genshin Regular';
+    src: url('../Fonts/Genshin\ Impact\ Regular.ttf') format('ttf'),
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
