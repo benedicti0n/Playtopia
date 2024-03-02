@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Register from './Register.jsx'
+import SignUp from './SignUp.jsx'
 import Login from './Login.jsx'
 import { Link } from 'react-router-dom'
 

@@ -31,7 +31,7 @@ const Login = () => {
 
       <button type='submit' className='my-2 cursor-pointer bg-slate-300 rounded-full'>Login</button>
     </form>
-    <p>Dont have an account? <Link to='/register' className='text-blue-500'>Register</Link> </p>
+    <p>Dont have an account? <Link to='/signUp' className='text-blue-500'>Register</Link> </p>
       </div>
   </div>
   )
