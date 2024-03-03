@@ -40,9 +40,9 @@ const SignUp = () => {
         // ..
       });
   }
-
+  // 14213d
   return (
-    <div className="w-screen h-screen bg-[#14213d] flex justify-center items-center">
+    <div className="w-screen h-screen bg-[#020f31] flex justify-center items-center">
       <div class="box">
         <div class="content">
             <h1 class="heading">Playtopia</h1>
