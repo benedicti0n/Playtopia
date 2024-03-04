@@ -1,9 +1,12 @@
 @font-face {
-    font-family: 'Genshin';
-    src: url('../Fonts/Genshin-Impact-DRIP-FONT.ttf');
+	font-family: 'Valorax';
+	src: url('../Fonts/valorax.otf');
 }
-
 @font-face {
-    font-family: 'Genshin Regular';
-    src: url('../Fonts/zh-cn.ttf');
+	font-family: 'Kollektif';
+	src: url('../Fonts/Kollektif.ttf');
+}
+@font-face {
+	font-family: 'Kollektif Bold';
+	src: url('../Fonts/Kollektif-Bold.ttf');
 }
