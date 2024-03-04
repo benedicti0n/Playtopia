@@ -2,68 +2,27 @@ import React from "react";
 
 import SignUp from "./SignUp.jsx";
 import Login from "./Login.jsx";
+import Events from "./Events.jsx";
+import Navbar from "./Navbar.jsx";
 import { Link } from "react-router-dom";
 
 import "../Styles/Home.css";
 
+
 const Home = () => {
   return (
-    <div id="mainContainer">
+    <div id="homeContainer">
+
       <video
-        src="../assets/reyna-valorant-moewalls-com.mp4"
-        autoplay
+        src="/reyna-valorant-moewalls-com.mp4"
+        autoPlay
         muted
         loop
-      ></video>
-      <header id="headSection">
-        <div>
-          <img src="../assets/Playtopia Logo PNG 2.svg" alt="" />
-        </div>
+      >
+      </video>
 
-        <div class="cd-header">
-          <div class="header-wrapper">
-            <div class="nav-but-wrap">
-              <div class="menu-icon hover-target">
-                <span class="menu-icon__line menu-icon__line-left"></span>
-                <span class="menu-icon__line"></span>
-                <span class="menu-icon__line menu-icon__line-right"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="nav">
-          <div class="nav__content">
-            <ul class="nav__list">
-              <li class="nav__list-item active-nav">
-                <a href="#" class="hover-target">
-                  Login
-                </a>
-              </li>
-              <li class="nav__list-item">
-                <a href="#" class="hover-target">
-                  Home
-                </a>
-              </li>
-              <li class="nav__list-item">
-                <a href="#" class="hover-target">
-                  Events
-                </a>
-              </li>
-              <li class="nav__list-item">
-                <a href="#" class="hover-target">
-                  Galery
-                </a>
-              </li>
-              <li class="nav__list-item">
-                <a href="#" class="hover-target">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
+      <Navbar/>
+      
 
       <div id="aboutUs">
         <div id="aboutUsText">
@@ -86,7 +45,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+
     </div>
+
   );
 };
 
