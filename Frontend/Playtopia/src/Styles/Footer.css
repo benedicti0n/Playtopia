@@ -2,7 +2,6 @@
 
     .textArea{
         display: flex;
+        text-wrap: wrap;
     }
 }
-
-    

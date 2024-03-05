@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { useRef } from 'react';
+import React, { useState,useEffect,useRef,useLayoutEffect } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
+
+
 
 import SignUp from "./SignUp.jsx";
 import Login from "./Login.jsx";
@@ -13,8 +13,7 @@ import Navbar from "./Navbar.jsx";
 import { Link } from "react-router-dom";
 
 import "../Styles/Home.css";
-import '../Styles/Navbar.css'
-
+import '../Styles/Navbar.css';
 
 
 
@@ -24,16 +23,31 @@ import '../Styles/Navbar.css'
 
 const Home = () => {
   
+  const comp = useRef(null)
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline()
+      tl.from("#text-1", {
+        xPercent: "-100",
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.3,
+      })
+    }, comp)
+
+    return () => ctx.revert()
+  }, [])
 
   return (
-    <div id="homeContainer">
+    <div id="homeContainer" ref={comp}>
       
       <Navbar/>
       
 
       <div id="aboutUs">
         <div id="aboutUsText">
-          <h1>
+          <h1 id="text-1">
             ABOUT
             <br />
             US

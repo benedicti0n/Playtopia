@@ -33,9 +33,9 @@
 #aboutUs{
 	height: 400px;
 	width: 100%;
-	display: flex;
+	display: flex-end;
 	justify-content: space-between;
-	align-items: end;
+	/* align-items: end; */
 }
 
 #aboutUsText{

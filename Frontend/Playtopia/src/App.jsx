@@ -19,7 +19,6 @@ const router = createBrowserRouter(
   )
 )
 
-
 export default function App() {
   return (
     <>
