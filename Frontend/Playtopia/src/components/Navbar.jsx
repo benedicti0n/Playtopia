@@ -25,41 +25,37 @@ const Navbar = () => {
   }), [windowWidth]
 
   return (
-
-    windowWidth.windowWidth < 550 ?
-    <header id="headSection">
-      <div>
-        <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
-      </div>
-
-      <Hamburger/>
-      
-    </header>
-    :
-    <header id="headSection">
-      <div>
-        <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
-      </div>
-
-      <div id='linksSection'>
-        <a href="">Home</a>
-        <a href="">Events</a>
-        <a href="">Gallery</a>
-        <a href="">Contact Us</a>
-      </div>
-
-
-      <Link to={'/signUp'}>
-      <button>
-        Sign up
-        <div class="arrow-wrapper">
-          <div class="arrow"></div>
-        </div>
-      </button>
-      </Link>
-      
-    </header>
+    <div className='w-full h-[70px]'>
+      {windowWidth.windowWidth < 550 ? (
+        <header id="headSection" className="fixed">
+          <div>
+            <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
+          </div>
+          <Hamburger />
+        </header>
+      ) : (
+        <header id="headSection" className="fixed">
+          <div>
+            <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
+          </div>
+          <div id="linksSection" >
+            <a href="">Home</a>
+            <a href="">Events</a>
+            <a href="">Gallery</a>
+            <a href="">Contact Us</a>
+          </div>
+          <Link to={'/signUp'}>
+            <button>
+              Sign up
+              <div class="arrow-wrapper">
+                <div class="arrow"></div>
+              </div>
+            </button>
+          </Link>
+        </header>
+      )}
+    </div>
   );
-};
+      }
 
 export default Navbar;
