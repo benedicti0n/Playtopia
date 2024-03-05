@@ -28,7 +28,7 @@ const Home = () => {
       tl.from("#text-1", {
         xPercent: "-100",
         opacity: 0,
-        duration: 0.4,
+        duration: 0.8,
         delay: 0.3,
       })
     }, comp)
