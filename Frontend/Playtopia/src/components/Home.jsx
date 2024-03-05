@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useState } from "react";
 
 import SignUp from "./SignUp.jsx";
 import Login from "./Login.jsx";
@@ -10,6 +11,10 @@ import "../Styles/Home.css";
 import '../Styles/Navbar.css'
 
 
+// TODO: implement a full page smooth scroll. Reference help links given below:
+// https://www.youtube.com/watch?v=hnbOIVBREUM
+// https://github.com/oelbaga/snapscroll-react
+
 const Home = () => {
   
 
@@ -17,6 +22,7 @@ const Home = () => {
     <div id="homeContainer">
       
       <Navbar/>
+      
 
       <div id="aboutUs">
         <div id="aboutUsText">
