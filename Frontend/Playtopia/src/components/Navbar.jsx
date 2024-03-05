@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import DropdownItems from './DropdownItems';
-import AnimatedHamburgerButton from './AnimatedHamburgerButton';
 import Hamburger from './Hamburger';
 
 import '../Styles/Navbar.css';
@@ -27,14 +25,16 @@ const Navbar = () => {
   return (
     <div className='w-full h-[70px]'>
       {windowWidth.windowWidth < 550 ? (
-        <header id="headSection" className="fixed">
+        <header id="headSection" className="fixed" style={{ boxShadow: "0px 0px 0px #bebebe",
+                boxShadow: "0px 0px 30px #7c05f2" }} >
           <div>
             <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
           </div>
           <Hamburger />
         </header>
       ) : (
-        <header id="headSection" className="fixed">
+        <header id="headSection" className="fixed rounded-full" style={{ boxShadow: "0px 0px 0px #bebebe",
+        boxShadow: "0px 0px 30px #7c05f2" }} >
           <div>
             <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
           </div>

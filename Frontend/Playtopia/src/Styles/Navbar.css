@@ -5,10 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     backdrop-filter: blur(50px);
     left: 50%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     transform: translateX(-50%);
     z-index: 3;
 }

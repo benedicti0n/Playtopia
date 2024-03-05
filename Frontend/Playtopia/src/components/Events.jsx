@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "../Styles/Events-2.css";
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 import img1 from "../assets/images/bgImg1.jpg";
 import img2 from "../assets/images/bgImg2.jpg";
@@ -12,7 +12,7 @@ import img7 from "../assets/images/bgImg2.jpg";
 import "../Styles/Events.css";
 
 
-import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+// import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -66,8 +66,8 @@ const Events = () => {
     //             <img src={image} alt="" />
     //           </div>
 
-    <div id="eventsContainer" >
-      {/* <div class="slider-container">
+    // <div id="eventsContainer" >
+    //   <div class="slider-container">
 
     <div id="eventsContainer" style={{backgroundImage: `url(${mainImg})`}}>
       <div class="slider-container">
@@ -88,12 +88,11 @@ const Events = () => {
                     alt=""
                   />
                 </div> 
->>>>>>> refs/remotes/origin/main
             ))}
           </div>
         </div>
-      </div> */}
-    <Swiper
+      </div>
+    /* <Swiper
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -146,9 +145,8 @@ const Events = () => {
           <div className="swiper-pagination"></div>
         </div>
       </div>
-      </Swiper>
+      </Swiper> */
 
-    </div>
   );
 };
 
