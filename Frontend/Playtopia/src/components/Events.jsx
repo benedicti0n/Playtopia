@@ -3,6 +3,9 @@ import React from "react";
 import "../Styles/Events.css";
 
 const Events = () => {
+
+  
+
   return (
     <div id="eventsContainer">
       <div class="slider-container">
@@ -10,44 +13,44 @@ const Events = () => {
           <div class="imgContainer">
             <div id="gradientShade"></div>
             <img
-              src="/valoLogo.jpg"
+              src="/logos/valoLogo.jpg"
               alt=""
             />
           </div>
 
           <div class="imgContainer">
             <img
-              src="/bgmiLogo.jpg"
+              src="/logos/bgmiLogo.jpg"
               alt=""
             />
           </div>
           <div class="imgContainer">
             <img
-              src="/8bpLogo.jpg"
+              src="/logos/8bpLogo.jpg"
               alt=""
             />
           </div>
           <div class="imgContainer">
             <img
-              src="/carromLogo.jpg"
+              src="/logos/carromLogo.jpg"
               alt=""
             />
           </div>
           <div class="imgContainer">
             <img
-              src="/ttLogo.jpg"
+              src="/logos/ttLogo.jpg"
               alt=""
             />
           </div>
           <div class="imgContainer">
             <img
-              src="/openMicLogo.jpg"
+              src="/logos/openMicLogo.jpg"
               alt=""
             />
           </div>
           <div class="imgContainer">
             <img
-              src="/tresureLogo.jpg"
+              src="/logos/tresureLogo.jpg"
               alt=""
             />
           </div>
