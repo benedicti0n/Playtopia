@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from "react";
@@ -13,6 +18,8 @@ import { Link } from "react-router-dom";
 
 import "../Styles/Home.css";
 import '../Styles/Navbar.css';
+
+
 
 // TODO: implement a full page smooth scroll. Reference help links given below:
 // https://www.youtube.com/watch?v=hnbOIVBREUM

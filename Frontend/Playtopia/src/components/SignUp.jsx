@@ -51,7 +51,7 @@ function SignUp() {
 
         {/* Uncomment this for video background */}
         <div className="hidden lg:block lg:w-1/2">
-          <img src="/valoWallpaper.jpg" className="object-cover w-full h-full"/>
+          <img src="../assets/images/bgImg1.jpg" className="object-cover w-full h-full"/>
         </div>
         <form
           className="w-full px-6 py-8 md:px-8 lg:w-1/2"
