@@ -1,13 +1,12 @@
 import React from "react";
 
 import "../Styles/Events.css";
+// import Carousel from "./Carousel";
 
 const Events = () => {
 
-  
-
   return (
-    <div id="eventsContainer">
+    <div id="eventsContainer" >
       <div class="slider-container">
         <div class="slider">
           <div class="imgContainer">
@@ -57,6 +56,9 @@ const Events = () => {
         </div>
       </div>
     </div>
+
+   
+      // <Carousel/>
   );
 };
 

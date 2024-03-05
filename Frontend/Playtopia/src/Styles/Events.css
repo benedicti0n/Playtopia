@@ -7,9 +7,9 @@
 #eventsContainer {
   height: 100vh;
   width: 100%;
-  padding: 60px 10px;
+  /* padding: 0px 0px 30px 60px; */
   color: white;
-  background-image: url('/bgMobile1.jpeg');
+  background-image: url('/bg.jpg');
   background-position: top; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -20,9 +20,11 @@
   width: 300px;
   height: 100%;
   /* margin-left: 100px; */
+  position: absolute;
   border-radius: 10px;
   overflow-y: auto;
   scrollbar-width: none;
+  transform: translateX(27px);
 }
 
 .slider {
@@ -35,7 +37,7 @@
 
 .imgContainer{
     width: 100%;
-  height: 70%;
+  height: 50%;
   position: relative;
   height: 200px;
   overflow-y: hidden;
