@@ -1,12 +1,111 @@
 #headSection{
-    height: 70px;
+    height: 90px;
     width: 100%;
+    padding: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 10px;
     backdrop-filter: blur(30px);
 }
 
 #headSection img{
+height: 90px;
+}
+
+#linksSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#linksSection a{
+    font-family: 'Kollektif Bold';
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+}
+
+button {
+    height: 40px;
+    width: 130px;
+    font-family: 'Kollektif';
+    font-size: 15px;
+    margin-right: 20px;
+    --primary-color: #ffff;
+    --secondary-color: #002152;
+    --hover-color: #eceff2;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 50px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+  }
+  
+  button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  button:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  button:hover .arrow:before {
+    right: 0;
+  }
+  
+
+@media screen and (max-width: 550px) {
+    #headSection{
+        height: 70px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        backdrop-filter: blur(30px);
+        transition: 1s ease;
+        
+}
+
+#headSection img{
     height: 70px;
+}
 }

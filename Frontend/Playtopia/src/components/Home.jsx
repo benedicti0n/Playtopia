@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 import SignUp from "./SignUp.jsx";
 import Login from "./Login.jsx";
@@ -7,14 +8,16 @@ import Navbar from "./Navbar.jsx";
 import { Link } from "react-router-dom";
 
 import "../Styles/Home.css";
+import '../Styles/Navbar.css'
 
 
 const Home = () => {
+  
+
   return (
     <div id="homeContainer">
-
-      <Navbar/>
       
+      <Navbar/>
 
       <div id="aboutUs">
         <div id="aboutUsText">
