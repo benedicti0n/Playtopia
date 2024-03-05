@@ -13,8 +13,11 @@
   background-position: top; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+<<<<<<< HEAD
   position: relative;
   
+=======
+>>>>>>> refs/remotes/origin/main
 }
 
 #mainContainer{
@@ -31,7 +34,7 @@
   /* margin-left: 100px; */
   position: absolute;
   border-radius: 10px;
-  overflow-y: auto;
+  overflow-x: auto;
   scrollbar-width: none;
   transform: translateX(27px);
 }
