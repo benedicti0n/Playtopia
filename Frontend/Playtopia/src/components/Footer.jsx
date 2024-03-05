@@ -1,12 +1,14 @@
 import React from "react"
 // import { Instagram, Facebook } from "lucide-react"
+import '../Styles/Footer.css'
 
 const Footer = () => {
     return (
-        <footer className="bg-slate-800 w-full heading mt-6" >
-            <div className="container p-6 mx-auto" style={{backdropFilter: 'blur(10px)'}}>
-                <div className="lg:flex">
-                    <div className="w-full -mx-6 lg:w-2/5">
+        <footer className=" w-screen relative" style={{backgroundImage: 'url(/footer.jpg)'}} >
+            <div className="h-1 w-full  absolute "></div>
+            <div className=" w-full px-6 py-4 " style={{backdropFilter: 'blur(30px)'}}>
+                <div className="lg:flex w-full">
+                    <div className="w-full  lg:w-2/5">
                         <div className="px-6 flex justify-evenly items-center">
                             <a href="#">
                                 <img className="w-auto h-[120px]" src="/iem_logo_white.png" alt="iem logo" />
@@ -17,9 +19,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="mt-6 lg:mt-0 lg:flex-1">
-                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                        <div className="textArea grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                             <div>
-                                <h3 className="text-gray-700 uppercase dark:text-white">Faculty Coordinator</h3>
+                                <h3 className="text-gray-700 uppercase dark:text-white ">Faculty Coordinator</h3>
                                 <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Teacher 1</a>
                                 <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Teacher 2</a>
                                 <a href="#" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Teacher 3</a>
@@ -38,13 +40,13 @@ const Footer = () => {
                             <div>
                                 <h3 className="text-gray-700 uppercase dark:text-white">Location</h3>
                                 <a href="#">
-                                    <img className="w-auto h-[120px]" src="/Map.png" alt="iem logo" />
+                                    <img className="w-auto h-[120px] rounded-md" src="/Map.png" alt="iem logo" />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <hr className="h-px my-6 bg-gray-200 border-none dark:bg-gray-700" />
+                <hr className="h-px my-4 bg-gray-200 border-none dark:bg-gray-700" />
                 <div>
                     <p className="text-center text-gray-500 dark:text-gray-400">© Playtopia 2024 - All rights reserved</p>
                 </div>
