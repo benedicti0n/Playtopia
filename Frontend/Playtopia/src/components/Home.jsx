@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { useRef } from 'react';
+import React, { useState,useEffect,useRef,useLayoutEffect } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from "react";
 
 
 import SignUp from "./SignUp.jsx";
