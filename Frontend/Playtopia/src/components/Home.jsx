@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
+import { gsap } from "gsap";
+import { useLayoutEffect, useRef } from "react";
+
+
 import SignUp from "./SignUp.jsx";
 import Login from "./Login.jsx";
 import Events from "./Events.jsx";
@@ -8,8 +12,7 @@ import Navbar from "./Navbar.jsx";
 import { Link } from "react-router-dom";
 
 import "../Styles/Home.css";
-import '../Styles/Navbar.css'
-
+import '../Styles/Navbar.css';
 
 // TODO: implement a full page smooth scroll. Reference help links given below:
 // https://www.youtube.com/watch?v=hnbOIVBREUM
@@ -17,16 +20,31 @@ import '../Styles/Navbar.css'
 
 const Home = () => {
   
+  const comp = useRef(null)
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline()
+      tl.from("#text-1", {
+        xPercent: "-100",
+        opacity: 0,
+        duration: 0.4,
+        delay: 0.3,
+      })
+    }, comp)
+
+    return () => ctx.revert()
+  }, [])
 
   return (
-    <div id="homeContainer">
+    <div id="homeContainer" ref={comp}>
       
       <Navbar/>
       
 
       <div id="aboutUs">
         <div id="aboutUsText">
-          <h1>
+          <h1 id="text-1">
             ABOUT
             <br />
             US
