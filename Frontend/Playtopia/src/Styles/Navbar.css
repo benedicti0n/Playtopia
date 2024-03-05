@@ -1,5 +1,5 @@
 #headSection{
-    height: 90px;
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -8,5 +8,5 @@
 }
 
 #headSection img{
-    height: 90px;
+    height: 70px;
 }
