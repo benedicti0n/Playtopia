@@ -17,6 +17,15 @@
 height: 90px;
 }
 
+#headSection.active{
+  transition: 0.5s ease-in;
+  border-radius: 50px;
+}
+#headSection.notActive{
+  transition: 0.5s ease-out;
+  border-radius: 16px;
+}
+
 /* nonfixed one
 .navbar.fixed{
   height: 90px;

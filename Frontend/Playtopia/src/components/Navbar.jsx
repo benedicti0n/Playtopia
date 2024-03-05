@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import Hamburger from './Hamburger';
 
 import '../Styles/Navbar.css';
@@ -22,19 +23,35 @@ const Navbar = () => {
     }
   }), [windowWidth]
 
+
+  const [navbar, setNavbar] = useState(false)
+
+  const changeNavbar = () => {
+    if(window.scrollY >= 5){
+      setNavbar(true)
+    }else{
+      setNavbar(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeNavbar)
+
   return (
     <div className='w-full h-[70px]'>
       {windowWidth.windowWidth < 550 ? (
-        <header id="headSection" className="fixed" style={{ boxShadow: "0px 0px 0px #bebebe",
+
+        <header id="headSection" className={navbar ? "active fixed" : "notActive fixed"} style={{ boxShadow: "0px 0px 0px #bebebe",
                 boxShadow: "0px 0px 30px #7c05f2" }} >
           <div>
             <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
           </div>
           <Hamburger />
         </header>
+
       ) : (
-        <header id="headSection" className="fixed rounded-full" style={{ boxShadow: "0px 0px 0px #bebebe",
-        boxShadow: "0px 0px 30px #7c05f2" }} >
+
+        <header id="headSection" className={navbar ? "active fixed" : "notActive fixed "} style={{  boxShadow: "0px 0px 0px #ED904D",
+        boxShadow: "0px 0px 30px #ED904D" }} >
           <div>
             <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
           </div>
@@ -54,6 +71,7 @@ const Navbar = () => {
           </Link>
         </header>
       )}
+
     </div>
   );
       }
