@@ -5,8 +5,13 @@ import "../Styles/SignUp.css";
 
 
 function SignUp() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleNameChange = (e) => {
+    setName(e.target.value)
+  }
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -32,9 +37,11 @@ function SignUp() {
         console.log(errorMessage);
         // ..
       });
+    console.log("Name:", name);
     console.log("Email:", email);
     console.log("Password:", password);
     // Reset the form fields after submission if needed
+    setName("")
     setEmail("");
     setPassword("");
   };
@@ -87,6 +94,21 @@ function SignUp() {
               className="block mb-2 text-sm font-medium text-gray-200"
               htmlFor="LoggingEmailAddress"
             >
+              Name
+            </label>
+            <input
+              id="LoggingEmailAddress"
+              className="block w-full px-4 py-2 text-slate-50 border rounded-lg bg-gray-800 border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
+              type="email"
+              value={name}
+              onChange={handleNameChange}
+            />
+          </div>
+          <div className="mt-4">
+            <label
+              className="block mb-2 text-sm font-medium text-gray-200"
+              htmlFor="LoggingEmailAddress"
+            >
               Email Address
             </label>
             <input
@@ -126,22 +148,10 @@ function SignUp() {
           <div className="mt-6">
             <button
               type="submit"
-              className="w-full flex justify-center items-center px-6 py-3 text-xl font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50"
+              className="w-full flex justify-center items-center px-6 py-3 mb-3 text-xl font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50"
             >
               Sign In
             </button>
-          </div>
-          <div className="flex items-center justify-between mt-4">
-            <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4" />
-            <Link to={'/logIn'}>
-            <a
-              className="text-xs text-gray-400 hover:underline"
-            >
-              Already have an account? Log in
-              {/* Don&apos;t have an account yet ? */}
-            </a>
-            </Link>
-            <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4" />
           </div>
         </form>
       </div>
