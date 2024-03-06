@@ -1,34 +1,48 @@
-import React, { useState, useRef, useEffect } from "react";
-import "../Styles/Swiper.css";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow } from 'swiper/modules';
 
-import img1 from "../assets/images/bgImg1.jpg";
-import img2 from "../assets/images/bgImg2.jpg";
-import img3 from "../assets/images/bgImg3.jpg";
-import img4 from "../assets/images/bgImg2.jpg";
-import img5 from "../assets/images/bgImg2.jpg";
-import img6 from "../assets/images/bgImg2.jpg";
-import img7 from "../assets/images/bgImg2.jpg";
-import "../Styles/Events.css";
-
-import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
+import "../Styles/Swiper.css";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "../Styles/Events.css";
 import "swiper/css/effect-coverflow";
 
-import slide_image_1 from "../assets/images/valoLogo.jpg";
-import slide_image_2 from "../assets/images/bgmiLogo.jpg";
-import slide_image_3 from "../assets/images/carromLogo.jpg";
-import slide_image_4 from "../assets/images/openMicLogo.jpg";
-import slide_image_5 from "../assets/images/tresureLogo.jpg";
-import slide_image_6 from "../assets/images/ttLogo.jpg";
-import slide_image_7 from "../assets/images/8bpLogo.jpg";
+// Import images for desktop size
+import img1 from "../../public/EventBg/Desktop/bgImg1.jpg";
+import img2 from "../../public/EventBg/Desktop/bgImg2.jpg";
+import img3 from "../../public/EventBg/Desktop/bgImg3.jpg";
+import img4 from "../../public/EventBg/Desktop/bgImg4.jpg";
+import img5 from "../../public/EventBg/Desktop/bgImg5.jpg";
+import img6 from "../../public/EventBg/Desktop/bgImg6.jpg";
+import img7 from "../../public/EventBg/Desktop/bgImg7.jpg";
+
+// Import images for mobile size
+import phnImg1 from "../../public/EventBg/Phone/phnBg1.jpg";
+import phnImg2 from "../../public/EventBg/Phone/phnBg2.jpg";
+import phnImg3 from "../../public/EventBg/Phone/phnBg3.jpg";
+import phnImg4 from "../../public/EventBg/Phone/phnBg4.jpg";
+import phnImg5 from "../../public/EventBg/Phone/phnBg5.jpg";
+import phnImg6 from "../../public/EventBg/Phone/phnBg6.jpg";
+import phnImg7 from "../../public/EventBg/Phone/phnBg7.jpg";
+
+// Import slide images
+import slide_image_1 from "../../public/EventBg/SliderLogo/valoLogo.jpg";
+import slide_image_2 from "../../public/EventBg/SliderLogo/bgmiLogo.jpg";
+import slide_image_3 from "../../public/EventBg/SliderLogo/carromLogo.jpg";
+import slide_image_4 from "../../public/EventBg/SliderLogo/8bpLogo.jpg";
+import slide_image_5 from "../../public/EventBg/SliderLogo/ttLogo.jpg";
+import slide_image_6 from "../../public/EventBg/SliderLogo/tresureLogo.jpg";
+import slide_image_7 from "../../public/EventBg/SliderLogo/openMicLogo.jpg";
+
+// Define images for desktop size
+const imagesDesktop = [img1, img2, img3, img4, img5, img6, img7];
+
+// Define images for mobile size
+const imagesPhone = [phnImg1, phnImg2, phnImg3, phnImg4, phnImg5, phnImg6, phnImg7];
 
 const Events = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [mainImg, setMainImg] = useState(img1);
+  const [mainImg, setMainImg] = useState(imagesDesktop[0]);
 
   const detectSize = () => {
     setWindowWidth(window.innerWidth);
@@ -42,71 +56,57 @@ const Events = () => {
     }
   }, []);
 
-
   const handleScrollToEnd = () => {
-    const newImages = [...images];
+    const newImages = [...(windowWidth < 550 ? imagesPhone : imagesDesktop)];
     const topImage = newImages.shift();
     newImages.push(topImage);
     setMainImg(newImages[0]);
   };
 
-
-  const images = [img1, img2, img3, img4, img5, img6, img7];
   const slideImages = [slide_image_1, slide_image_2, slide_image_3, slide_image_4, slide_image_5, slide_image_6, slide_image_7];
 
   const handleChangeBackground = (index) => {
-    setMainImg(images[index]);
+    setMainImg(windowWidth < 550 ? imagesPhone[index] : imagesDesktop[index]);
+  };
+
+  const handleSlideChange = (swiper) => {
+    setMainImg(imagesDesktop[swiper.realIndex]);
   };
 
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative"  >
       {windowWidth < 550 ? (
-        <div className="absolute bottom-0 left-0 w-full">
-          <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-      >
-          {images.map((image, index) => (
-            <SwiperSlide key={index}>
-              <img src={image} alt={`slide_image_${index}`} />
-            </SwiperSlide>
-          ))}
-          {/* <div className="slider-main">
-            <div className="slider-controler">
-              <div className="swiper-button-prev slider-arrow">
-                <ion-icon name="arrow-back-outline"></ion-icon>
-              </div>
-              <div className="swiper-button-next slider-arrow">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-              <div className="swiper-pagination"></div>
-            </div>
-          </div> */}
-        </Swiper>
+        <div id="phoneScreen" className=" w-full h-screen"  style={{ backgroundImage: `url(${mainImg})` }}>
+          <div className="absolute bottom-[60px] left-0 w-full" >
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={"auto"}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+              }}
+              modules={[EffectCoverflow]}
+              className="swiper_container"
+              onSlideChange={handleSlideChange}
+            >
+              {slideImages.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img src={image} alt={`slide_image_${index}`} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
-        
       ) : (
         <div id="eventsContainer" style={{ backgroundImage: `url(${mainImg})` }}>
           <div className="slider-container" onScroll={handleScrollToEnd}>
             <div className="slider">
-              {images.map((image, index) => (
+              {imagesDesktop.map((image, index) => (
                 <div
                   className="imgContainer"
                   key={index}
@@ -120,9 +120,8 @@ const Events = () => {
           </div>
         </div>
       )}
-      </div>
+    </div>
   );
 };
-
 
 export default Events;
