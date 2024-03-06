@@ -24,7 +24,7 @@
 
 	background: url('/bg.jpg');
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position: center;
 	background-size: cover;
 
 }
@@ -221,8 +221,10 @@
 		overflow: hidden;
 		background: url('/bg.jpg');
 		background-repeat: no-repeat;
-		background-position: right;
+		background-position: center;
 		background-size: cover;
+
+		
 	
 	}
 

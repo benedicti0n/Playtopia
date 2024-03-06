@@ -1,8 +1,8 @@
 import React, { useState,useEffect,useRef,useLayoutEffect } from "react";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -25,22 +25,22 @@ const Home = () => {
   
   const comp = useRef(null)
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const tl = gsap.timeline()
-      tl.from("#text-1", {
-        xPercent: "-100",
-        opacity: 0,
-        duration: 0.8,
-        delay: 0.3,
-      })
-    }, comp)
+  // useLayoutEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     const tl = gsap.timeline()
+  //     tl.from("#text-1", {
+  //       xPercent: "-100",
+  //       opacity: 0,
+  //       duration: 0.8,
+  //       delay: 0.3,
+  //     })
+  //   }, comp)
 
-    return () => ctx.revert()
-  }, [])
+  //   return () => ctx.revert()
+  // }, [])
 
   return (
-    <div id="homeContainer" ref={comp}>
+    <div id="homeContainer" >
       
       <Navbar/>
       
