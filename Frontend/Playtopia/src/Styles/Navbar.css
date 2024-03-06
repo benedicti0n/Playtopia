@@ -20,10 +20,15 @@ height: 90px;
 #headSection.active{
   transition: 0.5s ease-in;
   border-radius: 50px;
+  box-shadow: 0px 0px 0px #ED904D,
+             0px 0px 50px #ED904D;
+
 }
 #headSection.notActive{
   transition: 0.5s ease-out;
   border-radius: 16px;
+  box-shadow: 0px 0px 0px #ED904D,
+              0px 0px 30px #ED904D;
 }
 
 /* nonfixed one

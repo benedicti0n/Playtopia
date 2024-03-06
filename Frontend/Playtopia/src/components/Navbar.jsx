@@ -40,8 +40,7 @@ const Navbar = () => {
     <div className='w-full h-[70px]'>
       {windowWidth.windowWidth < 550 ? (
 
-        <header id="headSection" className={navbar ? "active fixed" : "notActive fixed"} style={{ boxShadow: "0px 0px 0px #bebebe",
-                boxShadow: "0px 0px 30px #7c05f2" }} >
+        <header id="headSection" className={navbar ? "active fixed" : "notActive fixed"} >
           <div>
             <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
           </div>
@@ -50,8 +49,7 @@ const Navbar = () => {
 
       ) : (
 
-        <header id="headSection" className={navbar ? "active fixed" : "notActive fixed "} style={{  boxShadow: "0px 0px 0px #ED904D",
-        boxShadow: "0px 0px 30px #ED904D" }} >
+        <header id="headSection" className={navbar ? "active fixed" : "notActive fixed "} >
           <div>
             <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
           </div>
