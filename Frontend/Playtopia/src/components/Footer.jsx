@@ -4,7 +4,7 @@ import '../Styles/Footer.css'
 
 const Footer = () => {
     return (
-        <footer className="h-[50%] w-screen relative" style={{backgroundImage: 'url(/footer.jpg)'}} >
+        <footer className="h-[50%] w-full relative" style={{backgroundImage: 'url(/footer.jpg)'}} >
             <div className=" w-full px-6 py-10 " style={{backdropFilter: 'blur(30px)'}}>
                 <div className="lg:flex w-full">
                     <div className="w-full  lg:w-2/5">

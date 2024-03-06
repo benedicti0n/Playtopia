@@ -63,7 +63,7 @@ const Events = () => {
   };
 
   return (
-    <div className="w-screen h-screen">
+    <div className="w-full h-screen">
       {windowWidth.windowWidth < 550 ? (
         <Swiper
           effect={"coverflow"}
