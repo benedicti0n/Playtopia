@@ -40,21 +40,19 @@ function SignUp() {
   };
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-[#0c1647]">
-      <div style={{ boxShadow: "0px 0px 0px #bebebe",
-                    boxShadow: "0px 0px 30px #7c05f2" }} 
-            className="flex w-full max-w-md mx-auto overflow-hidden rounded-lg shadow-lg bg-gray-800 lg:max-w-4xl sm:max-w-6xl">
+    <div className="w-screen h-screen flex justify-center items-center bg-slate-100">
+      <div className="flex w-full max-w-md mx-auto overflow-hidden rounded-lg shadow-lg bg-gray-800 lg:max-w-6xl md:max-w-lg sm:max-w-6xl">
 
         {/* uncomment this for image  */}
 
         {/* <div className="hidden bg-cover bg-no-repeat lg:block lg:w-1/2" style={{ backgroundImage: 'url("/public/jet.jpg")' }} /> */}
 
         {/* Uncomment this for video background */}
-        <div className="hidden lg:block lg:w-1/2">
+        <div className="hidden bg-cover bg-no-repeat lg:block lg:w-1/2">
           <img src="/bgImg1.jpg" className="object-cover w-full h-full"/>
         </div>
         <form
-          className="w-full px-6 py-8 md:px-8 lg:w-1/2"
+          className="w-full px-12 py-8 md:px-16 lg:w-1/2"
           onSubmit={handleSubmit}
         >
           <div className="flex justify-center mx-auto">
