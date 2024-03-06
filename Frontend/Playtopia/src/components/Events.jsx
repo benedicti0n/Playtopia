@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../Styles/Events-2.css";
+import "../Styles/Swiper.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import img1 from "../assets/images/bgImg1.jpg";

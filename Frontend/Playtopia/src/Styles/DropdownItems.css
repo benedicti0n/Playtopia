@@ -6,11 +6,13 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  backdrop-filter: blur(30px);
+   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* background: linear-gradient(135deg, #535353d8 0%, #ffffff60 100%); */
   border-radius: 10px;
   padding: 60px 0px 20px 40px;
   width: 200px;
-  color: rgb(139, 139, 139);
+  /* color: rgb(139, 139, 139); TODO: bg blur is not working woth blurred navbar */
   opacity: 0;
   visibility: hidden;
   transform: translateX(50px);
