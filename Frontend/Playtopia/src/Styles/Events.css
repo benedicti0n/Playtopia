@@ -27,14 +27,14 @@
 }
 
 .slider-container {
-  width: 300px;
+  width: 200px;
   height: 100%;
   /* margin-left: 100px; */
   position: absolute;
   border-radius: 10px;
   overflow-x: auto;
   scrollbar-width: none;
-  transform: translateX(27px);
+  /* transform: translateX(27px); */
 }
 
 .slider {
@@ -47,10 +47,9 @@
 
 .imgContainer{
     width: 100%;
-  height: 50%;
-  /* position: relative; */
-  height: 200px;
-  /* overflow-y: hidden; */
+  position: relative;
+  height: 150px;
+  overflow-y: hidden;
 }
 .imgContainer img{
     height: 100%;
