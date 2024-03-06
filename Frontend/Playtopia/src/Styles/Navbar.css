@@ -146,7 +146,7 @@ button {
         justify-content: space-between;
         border-radius: 10px;
         backdrop-filter: blur(50px);
-        transition: 1s ease;
+        /* transition: 1s ease; */
         left: 50%;
     transform: translateX(-50%);    
     z-index: 3;  
@@ -157,6 +157,7 @@ button {
   border-radius: 50px;
   /* box-shadow: 0px 0px 0px #A677F6,
              0px 0px 50px #A677F6; */
+             padding: 0px 0px;
 
 }
 #headSection.notActive{
@@ -164,6 +165,7 @@ button {
   border-radius: 16px;
   /* box-shadow: 0px 0px 0px #A677F6,
               0px 0px 30px #A677F6; */
+              padding: 0px 0px;
 }
 
 #headSection img{
