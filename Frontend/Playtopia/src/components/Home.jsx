@@ -4,13 +4,8 @@ import React, { useState,useEffect,useRef,useLayoutEffect } from "react";
 
 // gsap.registerPlugin(ScrollTrigger);
 
-
-
-import SignUp from "./SignUp.jsx";
-import Login from "./Login.jsx";
-import Events from "./Events.jsx";
 import Navbar from "./Navbar.jsx";
-import { Link } from "react-router-dom";
+
 
 import "../Styles/Home.css";
 import '../Styles/Navbar.css';
@@ -23,7 +18,7 @@ import '../Styles/Navbar.css';
 
 const Home = () => {
   
-  const comp = useRef(null)
+  // const comp = useRef(null)
 
   // useLayoutEffect(() => {
   //   let ctx = gsap.context(() => {
@@ -60,8 +55,8 @@ const Home = () => {
           </p>
         </div>
         <div id="swipeDown">
-          <div class="lines">
-            <div class="line"></div>
+          <div className="lines">
+            <div className="line"></div>
             <div id="swipeDownTxt">Swipe Down</div>
           </div>
         </div>
