@@ -19,8 +19,8 @@ import img7 from "../../public/EventBg/Desktop/bgImg7.jpg";
 // Import images for mobile size
 import phnImg1 from "../../public/EventBg/Phone/phnBg1.jpg";
 import phnImg2 from "../../public/EventBg/Phone/phnBg2.jpg";
-import phnImg3 from "../../public/EventBg/Phone/phnBg3.jpg";
-import phnImg4 from "../../public/EventBg/Phone/phnBg4.jpg";
+import phnImg3 from "../../public/EventBg/Phone/phnBg4.jpg";
+import phnImg4 from "../../public/EventBg/Phone/phnBg3.jpg";
 import phnImg5 from "../../public/EventBg/Phone/phnBg5.jpg";
 import phnImg6 from "../../public/EventBg/Phone/phnBg6.jpg";
 import phnImg7 from "../../public/EventBg/Phone/phnBg7.jpg";
@@ -42,7 +42,7 @@ const imagesPhone = [phnImg1, phnImg2, phnImg3, phnImg4, phnImg5, phnImg6, phnIm
 
 const Events = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [mainImg, setMainImg] = useState(imagesDesktop[0]);
+  const [mainImg, setMainImg] = useState(window.innerWidth < 550 ? imagesPhone[0] : imagesDesktop[0]);
 
   const detectSize = () => {
     setWindowWidth(window.innerWidth);
@@ -56,12 +56,6 @@ const Events = () => {
     }
   }, []);
 
-  const handleScrollToEnd = () => {
-    const newImages = [...(windowWidth < 550 ? imagesPhone : imagesDesktop)];
-    const topImage = newImages.shift();
-    newImages.push(topImage);
-    setMainImg(newImages[0]);
-  };
 
   const slideImages = [slide_image_1, slide_image_2, slide_image_3, slide_image_4, slide_image_5, slide_image_6, slide_image_7];
 
@@ -70,13 +64,13 @@ const Events = () => {
   };
 
   const handleSlideChange = (swiper) => {
-    setMainImg(imagesDesktop[swiper.realIndex]);
+    setMainImg(imagesPhone[swiper.realIndex]);
   };
 
   return (
-    <div className="w-full h-screen relative"  >
+    <div className="w-full h-full relative"  >
       {windowWidth < 550 ? (
-        <div id="phoneScreen" className=" w-full h-screen"  style={{ backgroundImage: `url(${mainImg})` }}>
+        <div id="phoneScreen" className=" w-full h-screen bg-cover bg-right"  style={{ backgroundImage: `url(${mainImg})` }}>
           <div className="absolute bottom-[60px] left-0 w-full" >
             <Swiper
               effect={"coverflow"}
@@ -104,7 +98,7 @@ const Events = () => {
         </div>
       ) : (
         <div id="eventsContainer" style={{ backgroundImage: `url(${mainImg})` }}>
-          <div className="slider-container" onScroll={handleScrollToEnd}>
+          <div className="slider-container" >
             <div className="slider">
               {imagesDesktop.map((image, index) => (
                 <div
