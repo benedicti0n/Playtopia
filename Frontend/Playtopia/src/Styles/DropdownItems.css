@@ -6,8 +6,8 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+   /* -webkit-backdrop-filter: blur(10px); */
+  /* backdrop-filter: blur(10px); */
   /* background: linear-gradient(135deg, #535353d8 0%, #ffffff60 100%); */
   border-radius: 10px;
   padding: 60px 0px 20px 40px;

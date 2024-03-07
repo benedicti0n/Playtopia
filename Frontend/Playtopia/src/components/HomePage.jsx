@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Home from "./Home";
 import Events from "./Events";
 import Footer from "./Footer";
-import Countdown from "./Countdown";
+import Aboutus from "./Aboutus";
 // import Loader from "./Loader";
 
 // import '../Styles/Transition.css'
@@ -23,7 +23,7 @@ function HomePage() {
       </div>
       
       <div>
-        <Countdown />
+        <Aboutus />
       </div>
 
       <div>

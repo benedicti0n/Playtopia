@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     /* border-radius: 10px; */
-    backdrop-filter: blur(50px);
+    /* backdrop-filter: blur(50px); */
     left: 50%;
     /* border: 2px solid red; */
     transform: translateX(-50%);
@@ -145,7 +145,7 @@ button {
         display: flex;
         justify-content: space-between;
         border-radius: 10px;
-        backdrop-filter: blur(50px);
+        /* backdrop-filter: blur(50px); */
         /* transition: 1s ease; */
         left: 50%;
     transform: translateX(-50%);    

@@ -60,7 +60,7 @@ const Events = () => {
   const slideImages = [slide_image_1, slide_image_2, slide_image_3, slide_image_4, slide_image_5, slide_image_6, slide_image_7];
 
   const handleChangeBackground = (index) => {
-    setMainImg(windowWidth < 550 ? imagesPhone[index] : imagesDesktop[index]);
+    setMainImg(imagesDesktop[index]);
   };
 
   const handleSlideChange = (swiper) => {
@@ -106,7 +106,7 @@ const Events = () => {
                   key={index}
                   onClick={() => handleChangeBackground(index)}
                 >
-                  <div id="gradientShade"></div>
+                  {/* <div id="gradientShade" s></div> */}
                   <img src={slideImages[index]} alt={`slide_image_${index}`} />
                 </div>
               ))}
