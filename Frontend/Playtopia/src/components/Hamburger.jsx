@@ -1,47 +1,104 @@
-import React from 'react'
-import DropdownItems from './DropdownItems'
-import { Link } from 'react-router-dom'
-import { useState  } from 'react'
-import '../Styles/Hamburger.css'
-import '../Styles/DropdownItems.css'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
+const navLinks = [
+  { title: "Sign In", href: "/signUp" },
+  { title: "Home", href: "/" },
+  { title: "About Us", href: "/" },
+  { title: "Events", href: "/" },
+  { title: "Gallery", href: "/" },
+  { title: "Sponsers", href: "/" },
+  { title: "Contact Us", href: "/" },
+];
 
-const Hamburger = () => {
-    const [open, setOpen] = useState(false);
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
 
-    // TODO: bug: when i click on the hamburger menu the menu opens but the if i click outside somewhere in webpage then it closes as it should but the hamburger icon is set to 'X' and only changes its state upon click. fix it as when the menu closes it should change its state to the inital drop down as it should 
+  const menuVars = {
+    initial: {
+      scaleY: 0,
+    },
+    animate: {
+      scaleY: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    },
+    exit: {
+      scaleY: 0,
+      transition: {
+        delay: 0.5,
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
 
-    
-
+  const containerVars = {
+    initial: {
+      transition: {
+        staggerChildren: 0.09,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        delayChildren: 0.1,
+        staggerChildren: 0.09,
+        staggerDirection: 1,
+      },
+    },
+  };
 
   return (
-    <div id="menuToggle"  >
-    
-    
-    
-    <div id='hamburger'>
-    <input type="checkbox" onClick={() => setOpen(!open) } />
-    <span></span>
-    <span></span>
-    <span></span>
-    </div>
-    
+    <header>
+      <nav className="flex justify-between items-center py-8 lg:py-4 px-2">
+        <div className="lg:flex hidden gap-12 text-md text-zinc-400">
+        </div>
+        <div className="cursor-pointer lg:hidden text-3xl text-white" onClick={toggleMenu}>
+          Menu
+        </div>
+      </nav>
+      <motion.div
+        variants={menuVars}
+        initial="initial"
+        animate={open ? "animate" : "initial"}
+        exit="exit"
+        className={`fixed left-0 top-0 w-full h-screen origin-top bg-transparent backdrop-blur-lg text-white p-10 ${open ? "" : "hidden"}`}
+      >
+        <div className="flex h-full flex-col">
+            <p className="cursor-pointer text-md text-white text-end" onClick={toggleMenu}>
+              Close
+            </p>
+          <motion.div
+            variants={containerVars}
+            initial="initial"
+            animate={open ? "open" : "initial"}
+            exit="initial"
+            className="flex flex-col h-full justify-center font-lora items-center gap-12"
+          >
+            {navLinks.map((link, index) => (
+              <motion.div
+                key={index}
+                variants={{
+                  initial: { y: "30vh" },
+                  open: { y: 0 },
+                }}
+                className="text-4xl uppercase text-white"
+              >
+                <a href={link.href}>{link.title}</a>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.div>
+    </header>
+  );
+};
 
-    <div className={`dropdown-menu ${open ? 'active' : 'inactive'}`}>
-            <ul>
-              {/* TODO1: Pass the Sign Up prop only when the user is not Logged in  or else it should show "My Profile"*/}
-              <DropdownItems text={'Sign Up'}><Link to={'signUp'}/>hi</DropdownItems>
-              <DropdownItems text={'Home'} />
-              <DropdownItems text={'Events'} />
-              <DropdownItems text={'Gallery'} />
-              <DropdownItems text={'Contact Us'} />
-              {/* TODO1: Show the Logout div below only when the user is logged in */}
-              {/* <DropdownItems text={'Logout'} /> */}
-            </ul>
-          </div>
-  </div>
-  )
-}
-
-export default Hamburger
+export default Navbar;

@@ -47,7 +47,7 @@ function SignUp() {
   };
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-slate-100">
+    <div className="w-full h-full flex justify-center items-center bg-slate-100">
       <div className="flex w-full max-w-md mx-auto overflow-hidden rounded-lg shadow-lg bg-gray-800 lg:max-w-6xl md:max-w-lg sm:max-w-6xl">
 
         {/* uncomment this for image  */}

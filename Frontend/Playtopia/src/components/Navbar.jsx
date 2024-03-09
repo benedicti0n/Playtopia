@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Hamburger from './Hamburger';
 
-import '../Styles/Navbar.css';
+import '../Styles/SignUpBtn.css'
 
 const Navbar = () => {
 
@@ -23,49 +23,38 @@ const Navbar = () => {
     }
   }), [windowWidth]
 
-
-  const [navbar, setNavbar] = useState(false)
-
-  const changeNavbar = () => {
-    if(window.scrollY >= 5){
-      setNavbar(true)
-    }else{
-      setNavbar(false)
-    }
-  }
-
-  window.addEventListener('scroll', changeNavbar)
-
   return (
-    <div className='w-full h-[70px]'>
+    <div className='w-full h-[100px] flex justify-between items-center font-[Kollektif]'>
       {windowWidth.windowWidth < 550 ? (
 
-        <header id="headSection" className={navbar ? "active fixed" : "notActive fixed"} >
+        <header id="headSection" className='h-[70px] w-full mt-0 flex justify-between items-center z-3'>
           <div>
-            <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
+            <img src="/Logo.svg" alt="" className='h-[70px]' />
           </div>
           <Hamburger />
         </header>
 
       ) : (
 
-        <header id="headSection" className={navbar ? "active fixed" : "notActive fixed "} >
+        <header id="headSection" className='h-[100px] w-full mt-[50px] flex justify-between items-center z-3'>
           <div>
-            <img src="/Playtopia-Logo-PNG-2.svg" alt="" />
+            <img src="/Logo.svg" alt="" className='h-[100px]'/>
           </div>
-          <div id="linksSection" >
-            <a href="">Home</a>
-            <a href="">Events</a>
-            <a href="">Gallery</a>
-            <a href="">Contact Us</a>
+          <div id="linksSection" className='flex justify-center items-center'>
+            <a href="" className=' text-[20px] text-white m-[20px]'>Home</a>
+            <a href="" className=' text-[20px] text-white m-[20px]'>Events</a>
+            <a href="" className=' text-[20px] text-white m-[20px]'>Gallery</a>
+            <a href="" className=' text-[20px] text-white m-[20px]'>Contact Us</a>
           </div>
           <Link to={'/signUp'}>
+
             <button>
               Sign up
-              <div className="arrow-wrapper">
+              <div className="flex justify-center items-center">
                 <div className="arrow"></div>
               </div>
             </button>
+
           </Link>
         </header>
       )}
