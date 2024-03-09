@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Home from "./Home";
-import Events from "./Events";
 import Footer from "./Footer";
 import Aboutus from "./Aboutus";
+import Events2 from "./Events2.jsx";
+import Gallery from "./Gallery.jsx";
 // import Loader from "./Loader";
 
 // import '../Styles/Transition.css'
@@ -16,38 +17,26 @@ function HomePage() {
 //     }, 5000);
 //   }, []);
 
+
+
   return (
-    <div>
-      <div>
-        <Home />
-      </div>
-      
-      <div>
-        <Aboutus />
-      </div>
-
-      <div>
-        <Events />
-      </div>
-
-      <div>
-        <Footer/>
-      </div>
-    </div>
-
-    // <div>
-    //   {
-    //     loading ?
-    //     <Loader/>
-    //     :
-    //     <div className=''>
-    //     <div><Home/></div>
-    //     <div><Countdown/></div>
-    //     <div><Events/></div>
-    //     <div><Footer></Footer></div>
-    // </div>
-    //   }
-    // </div>
+    <div className='h-screen snap-y snap-mandatory overflow-scroll z-0'>
+    <section  className='snap-center'>
+      <Home/>
+    </section>
+    <section  className='snap-center'>
+      <Aboutus/>
+    </section>
+    <section className='snap-center'>
+      <Events2/>
+    </section>
+    <section className='snap-center'>
+      <Gallery/>
+    </section>
+    <section className='snap-center'>
+      <Footer/>
+    </section>
+  </div>
   );
 }
 

@@ -48,7 +48,7 @@ const Countdown = () => {
   };
 
   return (
-    <div className="p-4 bg-gradient-to-br from-violet-600 to-indigo-600">
+    <div className="p-4 bg-transparent w-full">
       <div className="w-full max-w-5xl mx-auto flex items-center bg-white">
         <CountdownItem num={remaining.days} text="days" />
         <CountdownItem num={remaining.hours} text="hours" />

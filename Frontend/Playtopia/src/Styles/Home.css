@@ -1,77 +1,19 @@
-@font-face {
-	font-family: 'Valorax';
-	src: url('../Fonts/valorax.otf');
-}
-@font-face {
-	font-family: 'Kollektif';
-	src: url('../Fonts/Kollektif.ttf');
-}
-@font-face {
-	font-family: 'Kollektif Bold';
-	src: url('../Fonts/Kollektif-Bold.ttf');
-}
-
-#homeContainer{
-    height: 100vh;
-    width: 100%;
-	padding: 20px 100px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: column;
-	position: relative;
-	overflow: hidden;
-
-	background: url('/bg.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-
-}
-
-
-#aboutUs{
-	height: 400px;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-}
-
-#aboutUsText{
-	height: 400px;
-	width: 60%;
-	/* border-radius: 10px; */
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-}
-
-#aboutUs h1{
-	color: white;
-	font-family: 'Valorax';
-	font-size: 80px;
-}
-
-#aboutUs p{
-	color: white;
-	font-family: 'Kollektif';
-	font-size: 25px;
-	padding: 15px;
-	padding-left: 5px;
-}
+/* *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} */
 
 #swipeDown{
 	height: 400px;
 	width: 30%;
 	display: flex;
 	align-items: flex-end;
+	position: absolute;
+	right: 0;
+	bottom: 0;
 	z-index: 1;
 }
-
-
-
-  
 
   #swipeDownTxt{
 	position: absolute;
@@ -143,20 +85,6 @@
   }
   
 
-.main__action{
-	height: 100px;
-	width: 100px;
-	position: absolute;
-	top: -80px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	backdrop-filter: blur(50px);
-}
-
-
 
 @media screen and (max-width: 550px) {
 
@@ -175,19 +103,6 @@
 		background-size: cover;
 	}
 
-	#aboutUs h1{
-		color: white;
-		font-family: 'Valorax';
-		font-size: 30px;
-	}
-	
-	#aboutUs p{
-		color: white;
-		font-family: 'Kollektif';
-		font-size: 15px;
-		padding-left: 5px;
-		line-height: 20px;
-	}
 	.lines {
 	position: relative;
 	overflow: hidden;
@@ -280,16 +195,4 @@
 	
 	}
 
-	#aboutUs h1{
-		color: white;
-		font-family: 'Valorax';
-		font-size: 60px;
-	}
-	
-	#aboutUs p{
-		color: white;
-		font-family: 'Kollektif';
-		font-size: 20px;
-		padding-left: 5px;
-	}
 } 

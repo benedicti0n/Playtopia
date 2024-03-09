@@ -10,3 +10,11 @@
 	font-family: 'Kollektif Bold';
 	src: url('../Fonts/Kollektif-Bold.ttf');
 }
+@font-face {
+	font-family: 'PUBG';
+	src: url('../Fonts/PUBG.ttf');
+}
+@font-face {
+	font-family: 'Valorant';
+	src: url('../Fonts/Valorant.ttf');
+}
