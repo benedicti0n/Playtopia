@@ -11,6 +11,7 @@ import Aboutus from './components/Aboutus.jsx';
 import Events2 from './components/Events2.jsx';
 import Gallery from './components/Gallery.jsx'
 import Footer from './components/Footer.jsx'
+import CarouselComponent from './components/CarouselComponent.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route path='' element= {<HomePage/>}/>
       <Route path='signUp' element= {<SignUp/>}/>
       <Route path='logIn' element= {<Login/>}/>
+      <Route path='/carousel' element= {<CarouselComponent/>}/>
       {/* <Route path='forgot-password' element= {<ForgotPassword/>}/> */}
     </Route>
   )
