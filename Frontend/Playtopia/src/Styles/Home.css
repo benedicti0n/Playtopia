@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 } */
 
+*{
+	scroll-behavior: none;
+}
+
 #swipeDown{
 	height: 400px;
 	width: 30%;

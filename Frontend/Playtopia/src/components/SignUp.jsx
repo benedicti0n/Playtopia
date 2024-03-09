@@ -47,8 +47,8 @@ function SignUp() {
   };
 
   return (
-    <div className="w-full h-full flex justify-center items-center bg-slate-100">
-      <div className="flex w-full max-w-md mx-auto overflow-hidden rounded-lg shadow-lg bg-gray-800 lg:max-w-6xl md:max-w-lg sm:max-w-6xl">
+    <div className="w-full h-screen flex justify-center items-center bg-slate-100">
+      <div className="flex h-full w-full mx-auto overflow-hidden shadow-lg bg-gray-800 ">
 
         {/* uncomment this for image  */}
 
@@ -58,12 +58,14 @@ function SignUp() {
         <div className="hidden bg-cover bg-no-repeat lg:block lg:w-1/2">
           <img src="/bgImg1.jpg" className="object-cover w-full h-full"/>
         </div>
+
+        <div className="w-full h-screen lg:h-screen lg:w-1/2 flex justify-center items-center">
         <form
-          className="w-full px-12 py-8 md:px-16 lg:w-1/2"
+          className="w-full px-[50px] md:px-[10px] lg:px-[60px] xl:px-[150px] py-8"
           onSubmit={handleSubmit}
         >
           <div className="flex justify-center mx-auto">
-            <img src="/Playtopia-Logo-PNG-2.svg" className="h-24"/>
+            <img src="/Logo.svg" className="h-24"/>
           </div>
           <p className="welcome mt-3 text-xl text-center text-gray-200">
             Welcome
@@ -154,6 +156,7 @@ function SignUp() {
             </button>
           </div>
         </form>
+        </div>
       </div>
     </div>
   );

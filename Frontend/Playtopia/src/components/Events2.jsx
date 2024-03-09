@@ -8,7 +8,7 @@ const Events2 = () => {
 
         <div id="item1" className="carousel-item w-full bg-[url('/EventBg/Desktop/bgImg1.jpg')] bg-cover bg-center flex justify-start items-center text-white">
           <div className="h-[500px] w-[700px] mx-[100px] ">
-            <h1 className="text-8xl m-0 font-[Valorant]">Valorant</h1>
+            <h1 className="text-2xl lg:text-8xl m-0 font-[Valorant]">Valorant</h1>
             <p className="text-lg my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa deserunt at, id itaque dolor dolores cumque consequatur, accusantium quibusdam sequi eaque, assumenda asperiores fugit sint adipisci hic necessitatibus. Nisi, eius.</p>
             <div className="w-full flex mt-12">
               <button className="rounded-md text-center">Register</button>
