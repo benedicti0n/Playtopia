@@ -60,7 +60,7 @@ const Navbar = () => {
       <nav className="flex justify-between items-center py-8 lg:py-4 px-2">
         <div className="lg:flex hidden gap-12 text-md text-zinc-400">
         </div>
-        <div className="cursor-pointer lg:hidden text-3xl text-white" onClick={toggleMenu}>
+        <div className="cursor-pointer lg:hidden text-2xl text-white" onClick={toggleMenu}>
           Menu
         </div>
       </nav>
@@ -72,7 +72,7 @@ const Navbar = () => {
         className={`fixed left-0 top-0 w-full h-screen origin-top bg-transparent backdrop-blur-lg text-white p-10 ${open ? "" : "hidden"}`}
       >
         <div className="flex h-full flex-col">
-            <p className="cursor-pointer text-md text-white text-end" onClick={toggleMenu}>
+            <p className="cursor-pointer text-md text-white text-end text-2xl" onClick={toggleMenu}>
               Close
             </p>
           <motion.div
@@ -89,7 +89,7 @@ const Navbar = () => {
                   initial: { y: "30vh" },
                   open: { y: 0 },
                 }}
-                className="text-4xl uppercase text-white"
+                className="text-2xl uppercase text-white"
               >
                 <a href={link.href}>{link.title}</a>
               </motion.div>
